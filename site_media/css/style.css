@@ -1,0 +1,853 @@
+/* 
+    Created on : 17-oct-2016, 11:53:54
+    Author     : Alexia C. Durá
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    letter-spacing: 1px;
+    font-family: 'Rubik', sans-serif;
+    background-image:url(../img/Backgrounds/concrete_seamless.png);
+    background-attachment: fixed;
+}
+
+ul{list-style: none;}
+li{list-style: none;}
+a{text-decoration: none;}
+
+/*GENERAL
+============================================================================*/
+
+.wrapper{
+    width: 98%;
+    margin: 0 auto;
+}
+
+.col{
+    float: left;
+    margin: 15px auto;
+}
+
+.col_1{width:100%;}
+.col_2{width:50%;}
+.col_3{width:33.33%;}
+.col_4{width:25%;}
+.col_5{width:20%;}
+.col_6{width:16.66%;}
+
+.col_10{width:10%;}
+.col_20{width:20%;}
+.col_80{width:80%;}
+.col_90{width:90%;}
+.col_30{width:30%;}
+.col_70{width:70%;}
+
+
+#count{
+    text-decoration: underline;
+}
+
+#oops{
+    margin-top: 200px;
+    height: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.maintenance,.error{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    width: 250px;
+    text-align: center;
+    margin: 0 auto;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: ease;
+}
+
+.maintenance{
+    background-image: url(../img/icons/Settings/maintenance.png);
+}
+
+.error{
+    background-image: url(../img/icons/Settings/error-404.png);
+}
+
+.space{
+    float: left;
+    height: 160px!important;
+}
+.space2{
+    float: left;
+    height: 45px!important;
+}
+
+#hide{
+    color: #ededed!important;
+}
+
+/*COLOURS
+================================================================================*/
+
+header,footer, footer a,.sidenav,.academy h4,#contentStudent h4,.btnsProfile a, #box h3, input[type="submit"], form select,table th,#form select,#okButton{
+    background-color:#11285a;
+    color: #fff!important;
+    transition: .6s;
+}
+
+input{
+    border: 2px solid #11285a;
+    background-color: #ededed;
+}
+
+form input[type="submit"]:hover{
+    border: 2px solid #11285a;
+    color: #11285a!important;
+}
+
+#box a{
+    color: #11285a;
+}
+
+#formCheck input[type="submit"]:hover{
+    background-color: rgba(83, 121, 184,.8)!important;
+    color:rgba(83, 121, 184,.8)!important;
+}
+
+#okButton:hover{
+    background-color: #43b05c;
+    color: #11285a!important;
+}
+
+#content h3, .filter h3, #contentA h3,.formsCrud h3,#statsG h3{
+    border-bottom: #11285a groove 8px;
+}
+
+table th{
+    border: 1px solid #ededed;
+}
+
+table td,#contentC li{
+    border-bottom: 1px dashed #11285a 
+}
+
+#contentC table td a:hover{
+    color: #11285a;
+}
+
+#contentStudent div,#contentStudent h4{
+    border: 4px groove #11285a;
+}
+
+.btnsProfile a{
+    border: 2px solid #ededed;
+}
+
+.btnsProfile a:hover{
+    border: 2px solid #11285a;
+    background-color: tomato!important;
+    color: #11285a!important;
+}
+
+.stupays th{
+    background-color: #11285a;
+    border: 2px solid#ededed;
+}
+
+.stuComments{
+    border: 3px solid  #11285a;
+}
+
+.red{color: tomato;}
+.yellow{color: #fcb500;}
+.black{color: #000;}
+.green{color:#43b05c;}
+
+/*HEADER
+================================================================================*/
+header{
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+    color:#fff;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.exit,.back,.home{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    cursor: pointer;
+    z-index: 10;
+    transition: .8s;
+}
+
+.exit:hover,.back:hover,.home:hover{
+    transform: scale(1.05);
+}
+
+.exit{
+    background-image: url(../img/icons/Header/exit.png);
+    left: 20px;
+}
+
+.back{
+    background-image: url(../img/icons/Header/back.png);
+    left: 140px;
+}
+
+.home{
+    background-image: url(../img/icons/Header/home.png);
+    left: 80px;
+}
+
+.logo{
+    margin: 15px auto;
+    background-image: url(../img/icons/Logo/logo_pizarra_letras.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    top: 35px;
+    width: 350px;
+    height: 290px;
+    text-align: center;
+    -webkit-animation-duration: .8s;
+}
+
+/*NAV (ALL SECTIONS))
+====================================================================================*/
+#menuS,#menuSC,#closep{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 22px;
+    right: 120px;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    cursor: pointer;
+    z-index: 10;
+    transition: .8s;
+}
+
+#menuS:hover,#menuSC:hover,#closep:hover{
+    transform: scale(1.05);
+}
+
+#menuS{background-image: url(../img/icons/Settings/settings.png);
+       position: fixed;}
+
+#closep{background-image: url(../img/icons/Settings/cancel-music.png);
+        width: 20px;
+        height: 20px;
+        right: 30px;
+        top: 20px;}
+
+#menuSC{background-image: url(../img/icons/Settings/close2.png);
+        position: fixed;
+        display: none;}
+
+.sidenav{
+    height: 100%; 
+    width: 0; 
+    position: fixed;
+    z-index: 1; 
+    top: 0;
+    right: 0;
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+}
+
+.sidenav a {
+    padding:20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+    border-bottom: 1px dotted #fff;
+    text-align: center;
+    font-style: italic;
+}
+.topa{margin-top: 20px;}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: tomato;
+}
+
+#main {
+    transition: margin-right .5s;
+    padding: 20px;
+}
+
+#add,#update,#delete,#newUser,#search,#add2,#statsPic,#ended,#users, #prof {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 210px;
+    width: 27px;
+    height: 27px;
+    margin: 0 auto;
+    cursor: pointer;
+    display: none;
+    transition: .8s;
+}
+
+#add:hover,#update:hover,#delete:hover,#newUser:hover,#search:hover,#add2:hover,#statsPic:hover,#ended:hover,#users:hover, #prof:hover {
+    transform: scale(1.05);
+}
+
+#add{
+    top: 110px;
+    background-image: url(../img/icons/Settings/add-circular-outlined-button.png);
+}
+
+#add2{
+    background-image: url(../img/icons/Settings/altas.png);
+    top:440px;
+    width: 35px;
+    height: 35px;
+    right:200px!important;
+}
+
+#update{
+    top: 190px;
+    background-image: url(../img/icons/Settings/pencil.png);
+}
+
+#delete{
+    top: 280px;
+    background-image: url(../img/icons/Settings/delete.png);
+}
+
+#ended{
+    top:534px;
+    right:205px!important;
+    background-image: url(../img/icons/Settings/history.png);
+}
+
+#newUser{
+    top: 360px;
+    width: 32px;
+    height: 32px;
+    right:200px!important;
+    background-image: url(../img/icons/Settings/add-new-user.png);
+}
+
+#users{
+    top: 360px;
+    z-index: 9;
+    background-image: url(../img/icons/Settings/users.png);
+}
+
+#search{
+    top: 22px;
+    right: 70px;
+    width: 40px;
+    height: 40px;
+    display: block!important;
+    background-image: url(../img/icons/Header/search.png);
+}
+
+#statsPic{
+    top: 25px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+    display: block!important;
+    background-image: url(../img/icons/Header/presentation-board-with-graph.png);
+}
+
+
+/*OVERVIEW - DASHBOARD
+================================================================================*/
+#content,#contentC, #contentA{
+    width: 100%;
+    text-align: center;
+    margin: 10px auto;
+    line-height: 23px;
+    margin-bottom: 10px!important;
+}
+
+#contentA{
+    margin-top: 30px!important;
+    margin-bottom: 20px!important;
+}
+
+.locIcon{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.locIcon{background-image: url(../img/icons/Dashboard/pin.png);}
+
+#content h3, .filter h3, #contentA h3,.formsCrud h3, #statsG h3{
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    line-height: 35px;
+}
+
+.filter h3{
+    margin-bottom: 20px!important; 
+}
+
+#contentA h3{
+    margin-top: 80px!important;
+    margin-bottom: 10px!important;
+}
+
+.academy h3{
+    margin-bottom: 10px;
+}
+
+.academy h4:hover{
+    transform: scale(1.05);
+}
+
+#content h4, #contentA h4{
+    color: black;
+    font-weight: bold;
+    font-style: oblique;
+    padding-top: 2px;
+    font-size: 1.2em;
+}
+
+#content h4:hover, #contentA h4:hover{
+    color: #ed3911;
+    font-style: italic;
+}
+
+.academy h4{
+    font-size: 1.2em;
+    border-radius: 10px;
+    width: 50%;
+    margin: 5px auto;
+    font-style: italic!important;
+    font-weight: lighter !important;
+    padding: 5px;
+}
+
+.option{
+    display: block;
+    height: 120px;
+    transition: .8s all;
+    padding: 20px;
+}
+.option:hover{
+    transform: scale(1.2);
+}
+.option div,.optionUp div{
+    margin: 0 auto;
+    width: 70%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 20px;
+    position: relative;
+    transition: .8s all;
+}
+.option div:hover{
+    box-shadow: 0 0 15px rgba(0,0,0,.9);
+}
+
+.option h4:hover,.optionUp h4:hover{
+    color: black!important;
+    font-style: normal!important;
+}
+
+.optionTitle{
+    width: 100%;
+    height: 1px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 1.1em!important;
+    position: absolute;
+    bottom: 0px;
+    border-radius: 20px;
+}
+.option1{
+    background-image: url(../img/icons/Dashboard/bajas.png);
+}
+.option2{
+    background-image: url(../img/icons/Dashboard/inscritos.png);
+}
+.option3{
+    background-image: url(../img/icons/Dashboard/paid.png);
+}
+.option4{
+    background-image: url(../img/icons/Dashboard/unpaid.png);
+}
+.option5{
+    background-image: url(../img/icons/Dashboard/classroom.png);
+}
+.option6{
+    background-image: url(../img/icons/Dashboard/teacher-pointing-blackboard.png);
+}
+
+/*COURSES
+=========================================================================*/
+.course{
+    background-image: url(../img/icons/Dashboard/books.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+/*GROUPS
+=========================================================================*/
+.group{
+    background-image: url(../img/icons/Dashboard/group.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+#content span{text-decoration: underline;}
+
+
+/*FILTER TABLES
+============================================================================*/
+
+.filter{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.filter h4{
+    margin-top: 20px;
+}
+
+#contentC h3{
+    text-align: right;
+}
+
+
+/*//STUDENT PROFILE
+===============================================*/
+
+#contentStudent{
+    font-size: 1.2em;
+    letter-spacing: 3px;
+    margin: 80px auto;
+    line-height: 45px;
+}
+
+#contentF{
+    width: 100%;
+    text-align: center;
+}
+
+#contentC table td a{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#contentStudent ul{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+#contentStudent ul li{
+    width: 100%;
+    margin: 2px;  
+}
+
+#contentStudent ul li div{
+    margin: 0 auto;
+    border: none;
+    border-radius:0px;
+}
+
+#contentStudent div{
+    border-top:none;
+    border-radius:30px;
+}
+
+.address,.account,.telG,.telH,.ID,.mail,.stage,.news,.discover,.exStudent,.esp,.sede,.date,.groupIcon,.type,.absents,.idStu,.name{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+}
+
+.address{background-image: url(../img/icons/Student/home.png);}
+.ID{background-image: url(../img/icons/Student/id-card.png);}
+.account{background-image: url(../img/icons/Student/credit-cards.png);}
+.telG{background-image: url(../img/icons/Student/auricular-phone-symbol-in-a-circle.png);}
+.telH{background-image: url(../img/icons/Student/old-typical-phone.png);}
+.mail{background-image: url(../img/icons/Student/at.png);}
+.stage{background-image: url(../img/icons/Student/time-left.png);}
+.news{background-image: url(../img/icons/Student/newsletter.png);}
+.discover{background-image: url(../img/icons/Student/network.png);}
+.exStudent{background-image: url(../img/icons/Student/vip.png);}
+.esp{background-image: url(../img/icons/Dashboard/books.png);}
+.sede{background-image: url(../img/icons/Dashboard/pin.png);}
+.groupIcon{background-image: url(../img/icons/Dashboard/group.png);}
+.type{background-image: url(../img/icons/Student/university-campus.png);}
+.date{background-image: url(../img/icons/Student/calendar.png);}
+.absents{background-image: url(../img/icons/Student/bad-grades.png);}
+.idStu{background-image: url(../img/icons/Student/hash.png);}
+.name{background-image: url(../img/icons/Student/user.png);}
+
+#contentF h3{
+    font-size: 22px;
+    margin-top: 10px;
+    border-bottom: 5px groove rgb(87, 41, 100);
+    border-radius: 10px;
+}
+#contentStudent h5{font-size: 18px;}
+
+#contentStudent h4{
+    text-align: center;
+    width: 100%;
+    font-size: 20px; 
+    font-weight: lighter;
+    border-radius: 15px;
+}
+
+.btnsProfile{
+    text-align: center;
+    margin: 10px auto!important;
+}
+
+.btnsProfile a{
+    font-size: 13px;
+    padding: 5px;
+    border-radius:8px;
+    box-shadow: 0 0 10px black;
+}
+
+.btnsProfile a:hover{
+    background-color: #ededed;
+    font-weight: bolder;
+}
+
+.pagos h5{
+    text-align: right;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+table{
+    width: 100%;
+}
+
+th {
+    font-weight: lighter;
+    font-size: 15px;
+}
+table,th,td {
+    border-collapse: collapse;
+    padding: 2px;
+    text-align: center;
+}
+
+/*//PROFILE PAYMENTS AND COMMENTS
+====================================================*/
+.stupays,.stuComments{
+    height: 88%; 
+    width: 0; 
+    position: fixed;
+    bottom: 3%;
+    left: 0;
+    background-image: url(../img/Backgrounds/concrete_seamless.png);
+    overflow-x: hidden; 
+    padding-top: 40px; 
+    transition: 0.6s all; 
+    box-shadow: 0 0 8px black;
+    z-index: 10!important;
+}
+
+.stuComments{
+    height: 21%!important; 
+    position: absolute;
+    top: -21%;
+    left: 0;
+    width: 100%; 
+    text-align: center;
+    padding-top: 10px!important; 
+    padding: 60px;
+}
+
+.stupays table{
+    margin: 0px auto;
+    width: 100%;
+}
+
+.stupays table,th,td {
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: center;
+}
+
+.stupays td{
+    font-weight: bold;
+}
+
+.stupays caption{
+    color: rgba(87, 41, 100,.9);
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.stupays h3,.stuComments h3{
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+.stuComments h3{
+    margin-bottom: 2px!important;
+}
+
+.delInput{
+    width:30px;
+}
+
+/*//USER
+==========================================================*/
+.user div{
+    margin: 0 auto;
+}
+
+.user h4:hover{
+    color: #000!important;
+    font-style: normal!important;
+}
+
+#userActive,#userInactive{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 80px;
+    height: 80px;
+}
+
+#userActive h5,#userInactive h5{
+    position: relative;
+    top: 100px;
+    font-size: 1.5em!important;
+    color: black;
+    padding: 5px;
+}
+
+#userActive{
+    background-image: url(../img/icons/User/userActive.png);
+}
+
+#userInactive{
+    background-image: url(../img/icons/User/userInactive.png);
+}
+
+.delUser{
+    margin-top: 200px!important;
+}
+
+#show{
+    display: inline-block;
+}
+
+#pass,#hide{
+    display: none;
+}
+
+#pass{
+    position: relative;
+    bottom: 120px;
+}
+
+/*//STATS
+//==============================================================================*/
+#statsG{
+    margin: 90px auto!important;
+    text-align: center;
+}
+
+#statsT{
+    margin: 0px auto!important;
+    text-align: center;
+}
+
+#statsG div label{
+    position: relative;
+    top: -50px;
+}
+
+#stats div{
+    width: 100%;
+}
+
+
+#myChart,#myChart2{
+    margin: 0px auto;
+    width:360px;
+    height: 360px;
+    margin-bottom: 50px;
+}
+
+#myTotalChart,#myTotalChart2,#myTotalChart3{
+    margin: -50px auto;
+    width:360px;
+    height: 360px;
+}
+
+
+/*FOOTER
+==============================================================================*/
+footer{
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    font-weight: lighter;
+    font-size: .6em;
+    padding: 0px;
+    z-index: 10;
+}
+
+footer div a{
+    margin-bottom: 15px!important;
+}
+
+footer a:hover{
+    color: tomato;
+}

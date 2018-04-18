@@ -1,0 +1,144 @@
+/* 
+    Created on : Dec 22, 2016, 9:30:05 PM
+    Author     : AlexiaDura
+*/
+
+@media screen and (max-width:1500px){
+
+    .course{
+        width: 70px;
+        height: 70px;
+    }
+
+    .col{
+        margin: 8px auto!important;
+    }
+
+    #contentF h3{
+        font-size: 1.2em;
+    }
+
+    #contentStudent h4,#contentStudent ul li h5{
+        font-size: .9em;
+    }
+
+    #contentStudent{
+        margin-top: 35px!important;
+        line-height: 35px;
+    }
+    
+    .stupays,.stuComments{
+        height: 86%;
+    }
+
+    #message{
+        margin: 10px auto;
+        margin-bottom: 10px;
+    }
+
+    #contentStudent ul li{
+        padding: 1px;  
+        font-size: .9em;
+    }
+    .profilePic{
+        width: 60px;
+        height: 60px;
+    }
+
+    .profile{
+        margin-top: 65px;
+    }
+
+    .group{
+        width: 45px;
+        height: 45px;
+    }
+
+    #content h4, #contentA h4{
+        font-size: 1.1em;
+    }
+
+    #add2{
+        bottom:210px;
+        width: 35px;
+        height: 35px;
+        right:188px;
+    }
+
+    .absents{
+        top: 148px;
+    }
+
+    .filter h3{
+        margin-bottom: 5px;
+    }
+
+    .filter{
+        padding: 0px;
+    }
+
+    #form input{
+        margin-bottom: 15px;
+    }
+
+    .logo{
+        margin-top: 20px;
+        height: 210px;
+    }
+    footer{
+        padding: 8px;
+    }
+
+    .logo{
+        margin-top: 30px;
+        width: 280px
+    }
+
+    #contentA{
+        margin-top: 10px!important;
+        margin-bottom: 10px!important;
+    }
+
+
+}
+
+@media screen and (max-width:1020px){
+    #contentStudent .col_3{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:800px){
+
+    .col_3{
+        width: 50%;
+    }
+
+    .col_6{
+        width: 33.33%;
+    }
+
+    .academy h4{
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width:600px){
+    .col_3{
+        width: 100%;
+    }
+
+    .col_6{
+        width: 50%;
+    }
+
+    h1,h2{
+        font-size: 1.2em;
+    }
+
+    header{
+        padding:30px;
+    }
+}
+

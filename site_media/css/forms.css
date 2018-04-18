@@ -1,0 +1,271 @@
+/* 
+    Created on : 23-nov-2016, 9:32:19
+    Author     : Alexia C. Durá
+*/
+/*FORM LOGIN==========================================================================*/
+
+#box{
+    margin: 0px auto;
+    text-align: center;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#box h3{
+    margin: 40px auto;
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 5px;
+    width: 30%;
+}
+
+#formLogin input{
+    padding: 8px;
+    margin: 13px;
+    text-align: center;
+    border-radius: 10px;
+    width: 250px;
+}
+#formLogin input[type="submit"]{
+    border-radius: 10px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    line-height: 10px;
+    font-size: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+    width: auto;
+}
+
+#formLogin input[type="submit"]:hover{
+    background-image: url(../img/Backgrounds/concrete_seamless.png);
+    background-repeat: no-repeat;
+    font-weight: normal;
+}
+
+#formLogin input[type="radio"]{
+    width: 20px!important;
+    text-align: left;
+    padding: 2px;
+    display: compact;
+}
+
+#box a{
+    margin-top: 30px!important;
+    font-size: 1.2em;
+    text-decoration: underline;
+}
+
+#box a:hover{
+    font-size: 1.2em;
+    color: #ed3911;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: rgba(0,0,0,.7);
+    letter-spacing: 1px;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: rgba(0,0,0,.7);
+    letter-spacing: 1px;
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:rgba(0,0,0,.7);
+    letter-spacing: 1px;
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(0,0,0,.7);
+    letter-spacing: 1px;
+}
+
+
+/*//FORMS CRUD===============================================================================*/
+#form{
+    margin-top: 10px;
+}
+
+#form input{
+    width: 330px;
+    margin-bottom: 25px;
+    text-align: center;
+    border-radius: 5px; 
+    padding: 8px;
+    font-size: 15px;
+}
+
+#form select,#formCheck select{
+    font-size: 12px;
+    font-weight: lighter;
+    text-align: center;
+    box-shadow: 0 0 3px black;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+#message{
+    margin: 20px auto;
+    font-weight: bold;
+    font-size: 18px;
+    border: 1px solid rgb(87, 41, 100);
+    background: #ededed;
+    border-radius: 0px;
+    width: 400px;
+    box-shadow: 0 0 8px black;
+    text-align: center;
+}
+
+#form input[type="submit"],#okButton{
+    width: auto;
+    padding: 4px 4px 6px 4px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 10px;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    border: 1px solid rgb(87, 41, 100);
+    box-shadow: 0 0 3px black;
+    margin: 15px 0px -15px 0px;
+    border-radius: 6px;
+}
+
+#okButton{
+    margin-left: 0px;
+}
+
+#form label{
+    font-size: 1.1em!important;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-left: 7px;
+}
+
+#form input[type="submit"]:hover{
+    background-color: #43b05c!important;
+}
+
+#form input[type="radio"]{
+    padding: 0px;
+    border-radius: 0px; 
+    width: 25px;
+}
+
+#form textarea{
+    width: 320px;
+    height: 80px;
+}
+
+#btnSel{
+    width: auto!important;
+    margin-left: 15px;
+}
+
+.payBtn{
+    margin-bottom: 20px!important;
+}
+
+/*FORM CHECKBOXES*/
+/*==============================================*/
+#formCheck input[type="submit"]{
+    cursor: pointer;
+    border-radius: 100px;
+    border: none;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #ededed!important;
+    color: #ededed!important;
+    height: 30px;
+    width: 38px;
+    font-size: 0px!important;
+    float: left;
+    margin-bottom: 5px!important;
+    transition: .8s;
+}
+
+#formCheck input[type="submit"]:hover{
+  transform: scale(1.08);  
+}
+
+#formCheck p{
+    margin: 0;
+}
+#formCheck select{
+    float: left;
+}
+
+#formCheck #edit input[type="submit"]{
+    background-image: url(../img/icons/formCheck/pencil.png);
+}
+
+#formCheck #alta input[type="submit"]{
+    background-image: url(../img/icons/formCheck/plus.png);
+}
+
+#formCheck #baja input[type="submit"]{
+    background-image: url(../img/icons/formCheck/error.png);
+}
+
+#formCheck #end input[type="submit"]{
+    background-image: url(../img/icons/formCheck/cancel.png);
+}
+
+#formCheck #change input[type="submit"]{
+    background-image: url(../img/icons/formCheck/exchange-arrows.png);
+}
+
+#formCheck #arrow input[type="submit"]{
+    background-image: url(../img/icons/formCheck/long-arrow-pointing-to-the-right.png);
+}
+
+#formCheck #okA input[type="submit"]{
+    background-image: url(../img/icons/formCheck/ok-mark.png);
+}
+
+#formCheck #paid input[type="submit"]{
+    background-image: url(../img/icons/formCheck/pay-per-click.png);
+    height: 32px;
+}
+
+#formCheck #del input[type="submit"]{
+    background-image: url(../img/icons/Settings/bin.png);
+}
+
+#formCheck #refund input[type="submit"]{
+    background-image: url(../img/icons/Settings/return.png);
+    float: none;
+    text-align: center;
+}
+
+#formCheck #refund input[type="text"]{
+    height: 30px!important;
+    width: 150px;
+    text-align: center;
+}
+
+#formCheck #npaid input[type="submit"]{
+    background-image: url(../img/icons/formCheck/unpay-per-click.png);
+    height: 32px;
+}
+
+#formCheck table img{
+    height: 20px;
+    width: 20px;
+}
+
+.otherPay input[type="number"]{
+    width: 100px!important;
+    height:30px!important;
+}
+
+.otherPay input[type="date"]{
+    width: 170px!important;
+    text-align: center;
+}
